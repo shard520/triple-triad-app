@@ -1,0 +1,40 @@
+.card {
+  position: relative;
+  perspective: 100rem;
+  z-index: 1;
+  height: 100%;
+
+  border: solid 1px red;
+}
+
+.card-reverse,
+.card-front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: inherit;
+}
+
+.card-front,
+.card-reverse {
+  transition: transform 0.8s ease-in;
+  will-change: transform;
+}
+
+.card-reverse {
+  transform: rotateX(180deg);
+  backface-visibility: hidden;
+}
+
+.card-front {
+  transform: rotateX(0deg);
+}
+
+.card:hover .card-front {
+  transform: rotateX(-180deg);
+}
+
+.card:hover .card-reverse {
+  transform: rotateX(0deg);
+}

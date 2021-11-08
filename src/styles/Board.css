@@ -1,0 +1,27 @@
+.game-board {
+  background: url('../img/card-board.png') no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  width: 100%;
+  max-width: 70vw;
+  margin: auto;
+  height: 85vh;
+  display: grid;
+  grid-template-columns: 1fr 50% 1fr;
+  border: 1px solid blue;
+}
+
+.p1-cards {
+  grid-column: 1 / span 1;
+}
+
+.p2-cards {
+  grid-column: 3 / span 1;
+}
+
+.play-container {
+  grid-column: 2 / span 1;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  padding: 6vh 0;
+}

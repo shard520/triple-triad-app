@@ -1,0 +1,6 @@
+.app {
+  background-color: grey;
+  width: var(--page-width);
+  margin: auto;
+  margin-top: 7.5vh;
+}
